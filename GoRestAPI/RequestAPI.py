@@ -4,8 +4,6 @@ import json
 import string
 
 #base url:
-from requests import head
-
 base_url = "https://gorest.co.in"
 
 #Auth token:
@@ -53,9 +51,10 @@ def post_request():
     assert response.status_code == 201
     assert "name" in json_data
     assert json_data["name"] == "Naveen Automation"
-    return user_id
     print(".......POST/Create USER IS DONE.......")
     print(".......=====================.......")
+    return user_id
+
 
 #PUT Request
 def put_request(user_id):
